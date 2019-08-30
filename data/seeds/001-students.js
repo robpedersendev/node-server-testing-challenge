@@ -4,9 +4,9 @@ exports.seed = function(knex) {
    .then(function () {
      // Inserts seed entries
      return knex('students').insert([
-       {id: 1, name: 'Cedric', grade: 9 },
-       {id: 2, name: 'Bob', grade: 11 },
-       {id: 3, name: 'Dan', grade: 12 }
+       {id: 1, name: 'Cedric', course: "History" },
+       {id: 2, name: 'Bob', course: "Math" },
+       {id: 3, name: 'Dan', course: "Science" }
      ])
    })
 }
