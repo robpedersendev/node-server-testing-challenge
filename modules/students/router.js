@@ -30,6 +30,24 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+router.add('/', async (req, res) =>{
+ 
+ try{
+const student = await Students.add(req.body) 
+  if(!student) {
+    return res.status(404).json({
+      message: 'There is an invlaid student body'
+    })
+  } else{
+    return res.status(201).json(student)
+  }
+  } catch(error){
+    res.status(500).json({
+      error: error.message
+    })
+  }
+})
+
 router.delete('/:id', async (req, res) => {
   const { id } = req.params
   try {
