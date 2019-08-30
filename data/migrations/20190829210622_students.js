@@ -2,10 +2,10 @@
 exports.up = function(knex) {
  return knex.schema.createTable('students', table => {
    table.increments()
-   table.string('name', 30)
+   table.string('name', 128)
      .notNullable()
      .unique()
-   table.integer('grade')
+   table.integer('course', 128)
      .notNullable()
  })
 }
