@@ -1,6 +1,6 @@
 const request = require('supertest')
-const server = require('../../../api/server')
-const db = require('../../config')
+const server = require('../../api/server')
+const db = require('../../data/config')
 
 describe('Students API router', () => {
   beforeEach(async () => {

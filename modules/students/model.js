@@ -1,4 +1,4 @@
-const db = require('../../config')
+const db = require('../../data/config')
 
 const find = async () => {
   const students = await db('students')
